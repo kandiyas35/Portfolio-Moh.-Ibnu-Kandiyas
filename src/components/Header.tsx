@@ -1,23 +1,25 @@
-import React from 'react';
-import { Button } from '@/components/ui/button';
-import { Instagram, Linkedin, Github } from 'lucide-react';
+import React from "react";
+import { Button } from "@/components/ui/button";
+import { Instagram, Linkedin, Github } from "lucide-react";
 
 interface HeaderProps {
   currentPage?: string;
 }
 
-export const Header: React.FC<HeaderProps> = ({ currentPage = 'home' }) => {
+export const Header: React.FC<HeaderProps> = ({ currentPage = "home" }) => {
+  const [menuOpen, setMenuOpen] = React.useState(false); // <- state untuk toggle menu
+
   const navItems = [
-    { label: 'Beranda', href: '/', key: 'home' },
-    { label: 'Tentang', href: '/about', key: 'about' },
-    { label: 'Proyek', href: '/projects', key: 'projects' },
-    { label: 'Blog', href: '/blogs', key: 'blogs' },
-    { label: 'Kontak', href: '/contact', key: 'contact' },
+    { label: "Beranda", href: "/", key: "home" },
+    { label: "Tentang", href: "/about", key: "about" },
+    { label: "Proyek", href: "/projects", key: "projects" },
+    { label: "Blog", href: "/blogs", key: "blogs" },
+    { label: "Kontak", href: "/contact", key: "contact" },
   ];
 
   const dropdownItems = [
-    { label: 'Sertifikasi', href: '/certifications', key: 'certifications' },
-    { label: 'Organisasi', href: '/organizations', key: 'organizations' },
+    { label: "Sertifikat", href: "/certifications", key: "certifications" },
+    { label: "Organisasi", href: "/organizations", key: "organizations" },
   ];
 
   return (
@@ -26,7 +28,10 @@ export const Header: React.FC<HeaderProps> = ({ currentPage = 'home' }) => {
         <div className="flex items-center justify-between">
           {/* Logo/Name */}
           <div className="text-xl font-bold text-portfolio-white">
-            <a href="/" className="hover:text-portfolio-orange transition-colors flex items-center space-x-3">
+            <a
+              href="/"
+              className="hover:text-portfolio-orange transition-colors flex items-center space-x-3"
+            >
               <div className="w-10 h-10 bg-gradient-primary rounded-lg flex items-center justify-center text-white font-bold text-sm">
                 MIK
               </div>
@@ -34,7 +39,7 @@ export const Header: React.FC<HeaderProps> = ({ currentPage = 'home' }) => {
             </a>
           </div>
 
-          {/* Navigation */}
+          {/* Navigation (desktop) */}
           <nav className="hidden lg:flex items-center space-x-6">
             {navItems.map((item) => (
               <a
@@ -42,8 +47,8 @@ export const Header: React.FC<HeaderProps> = ({ currentPage = 'home' }) => {
                 href={item.href}
                 className={`text-sm font-medium transition-colors hover:text-portfolio-orange ${
                   currentPage === item.key
-                    ? 'text-portfolio-orange border-b-2 border-portfolio-orange pb-1'
-                    : 'text-portfolio-white'
+                    ? "text-portfolio-orange border-b-2 border-portfolio-orange pb-1"
+                    : "text-portfolio-white"
                 }`}
               >
                 {item.label}
@@ -53,8 +58,18 @@ export const Header: React.FC<HeaderProps> = ({ currentPage = 'home' }) => {
             <div className="relative group">
               <button className="text-sm font-medium text-portfolio-white hover:text-portfolio-orange transition-colors flex items-center">
                 Lainnya
-                <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                <svg
+                  className="w-4 h-4 ml-1"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M19 9l-7 7-7-7"
+                  />
                 </svg>
               </button>
               <div className="absolute top-full left-0 mt-2 w-48 bg-portfolio-navy-light rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
@@ -101,13 +116,52 @@ export const Header: React.FC<HeaderProps> = ({ currentPage = 'home' }) => {
 
           {/* Mobile menu button */}
           <div className="md:hidden">
-            <Button variant="ghost" size="icon">
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+            <Button
+              variant="ghost"
+              size="icon"
+              onClick={() => setMenuOpen(!menuOpen)}
+            >
+              <svg
+                className="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
               </svg>
             </Button>
           </div>
         </div>
+
+        {/* Mobile navigation menu */}
+        {menuOpen && (
+          <div className="md:hidden mt-4 bg-portfolio-navy-light p-4 rounded-lg space-y-2">
+            {navItems.map((item) => (
+              <a
+                key={item.key}
+                href={item.href}
+                className="block text-portfolio-white hover:text-portfolio-orange transition-colors"
+              >
+                {item.label}
+              </a>
+            ))}
+            <hr className="border-portfolio-navy" />
+            {dropdownItems.map((item) => (
+              <a
+                key={item.key}
+                href={item.href}
+                className="block text-portfolio-white hover:text-portfolio-orange transition-colors"
+              >
+                {item.label}
+              </a>
+            ))}
+          </div>
+        )}
       </div>
     </header>
   );

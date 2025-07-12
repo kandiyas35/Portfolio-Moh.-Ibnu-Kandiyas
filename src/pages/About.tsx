@@ -1,67 +1,62 @@
-import React from 'react';
-import { Header } from '@/components/Header';
-import { Footer } from '@/components/Footer';
-import { CTASection } from '@/components/CTASection';
-import profileHero from '@/assets/profile-hero.jpg';
-import project1 from '@/assets/project-1.jpg';
-import project2 from '@/assets/project-2.jpg';
-import project3 from '@/assets/project-3.jpg';
-import project4 from '@/assets/project-4.jpg';
+import React from "react";
+import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
+import { CTASection } from "@/components/CTASection";
+import project11 from "@/assets/project-11.jpg";
+import project7 from "@/assets/project-7.jpg";
+import project8 from "@/assets/project-8.jpg";
+import project9 from "@/assets/project-9.jpg";
+import project10 from "@/assets/project-10.jpg";
+import project6 from "@/assets/project-6.jpg";
 
 const About = () => {
   const experiences = [
     {
+      title: "BEM FT 2025",
+      subtitle: "Wakil Kepala Departemen Luar Negeri",
+      duration: "Januari 2025 - Sekarang",
+      responsibilities: [
+        "Menginisiasi program kerja Job Fair untuk menjembatani kebutuhan mahasiswa terhadap informasi karier dan peluang kerja, yang sebelumnya belum pernah diadakan di Fakultas Teknik UNESA. Program ini dilaksanakan melalui kolaborasi antardepartemen dan kerja sama strategis dengan Career Center UNESA (CCU). Kegiatan berhasil menghadirkan lebih dari 40 perusahaan dan menarik 2.000+ pengunjung, membuka akses langsung ke peluang kerja, magang dan rekrutmen bagi mahasiswa.",
+        "Mengawal dan mengkoordinir suksesnya Studi Banding BEM FT UNESA dengan BEM FT UM sebagai Komite Pengarah dari posisi Wakil Ketua Jurusan, guna mendorong terciptanya forum pertukaran gagasan antarorganisasi kemahasiswaan teknik. Berkontribusi dalam perencanaan konsep, koordinasi lintas divisi, serta pengawasan teknis pelaksanaan acara. Kegiatan ini berhasil melibatkan 100+ peserta dan menjadi sarana efektif dalam pengembangan kapasitas organisasi serta penguatan relasi kelembagaan antar BEM Fakultas Teknik.",
+      ],
+    },
+    {
       title: "BEM FT 2024",
-      subtitle: "Staff of the Department of Engineering, Research, and Technology",
-      duration: "March 2024 - Now",
+      subtitle: "Anggota Departemen Penalaran Riset & Teknologi",
+      duration: "January 2024 - Desember 2024",
       responsibilities: [
-        "Contributed to innovative research initiatives in engineering technology",
-        "Collaborated with cross-functional teams to develop technological solutions",
-        "Participated in academic conferences and technology workshops",
-        "Supported development of engineering research methodologies"
-      ]
+        "Memimpin sebagai Ketua Pelaksana LKTI tingkat Jawa-Bali, berhasil menyukseskan kompetisi dengan 25+ tim peserta, sekaligus menciptakan wadah untuk mengembangkan minat mahasiswa dalam menulis ilmiah.",
+        "Mengelola rangkaian acara EFASCO selama 4 hari sebagai Anggota Divisi Acara, dengan tanggung jawab menyusun rangkuman kegiatan, mengatur jalannya acara, serta berkoordinasi lintas tim. Kegiatan ini melibatkan 5 departemen dan meraih tingkat kepuasan peserta sebesar 8,5 dari 10.",
+        "Mengoordinasikan Divisi Acara pada Bootcamp Karya Tulis Ilmiah, bertanggung jawab atas perencanaan teknis, alur kegiatan, dan pengelolaan tim selama acara berlangsung. Kegiatan ini dihadiri oleh 300+ peserta dan memperoleh tingkat kepuasan sebesar 8 dari 10.",
+        "Berkolaborasi dalam menyelenggarakan seminar, lokakarya, dan pelatihan berbasis riset.",
+      ],
     },
-    {
-      title: "UI/UX Design Freelancer",
-      subtitle: "Independent Digital Designer",
-      duration: "January 2023 - Present",
-      responsibilities: [
-        "Designed user interfaces for mobile and web applications",
-        "Conducted user research and usability testing sessions",
-        "Created comprehensive design systems and style guides",
-        "Collaborated with development teams to ensure design implementation"
-      ]
-    },
-    {
-      title: "Student Organization Leadership",
-      subtitle: "Technology Committee Head",
-      duration: "September 2023 - February 2024",
-      responsibilities: [
-        "Led technology initiatives for student organization events",
-        "Managed digital marketing and social media presence",
-        "Coordinated with vendors and stakeholders for tech requirements",
-        "Mentored junior members in design and technology skills"
-      ]
-    }
   ];
 
   const galleryImages = [
-    project1, project2, project3, project4, profileHero, project1
+    project10,
+    project7,
+    project6,
+    project8,
+    project11,
+    project9,
   ];
 
   return (
     <div className="min-h-screen bg-portfolio-navy">
       <Header currentPage="about" />
-      
+
       {/* About Me Section */}
       <section className="pt-24 pb-16">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
             <h1 className="text-4xl lg:text-5xl font-bold text-portfolio-white mb-6">
-              ABOUT ME
+              TENTANG SAYA
             </h1>
             <p className="text-xl text-portfolio-gray max-w-4xl mx-auto leading-relaxed">
-              A UI/UX Designer who is passionate about User Experience, User Interface, and delightful design that creates meaningful connections between users and digital products.
+              Seorang Desainer UI/UX yang bersemangat tentang Pengalaman
+              Pengguna, Antarmuka Pengguna, dan desain menawan yang menciptakan
+              hubungan bermakna antara pengguna dan produk digital.
             </p>
           </div>
 
@@ -70,21 +65,32 @@ const About = () => {
               <div className="relative">
                 <div className="absolute inset-0 bg-portfolio-orange/20 rounded-full blur-3xl"></div>
                 <img
-                  src={profileHero}
-                  alt="Moh. Ibnu Kondiyasa"
+                  src={project11}
+                  alt="Moh. Ibnu Kandiyas"
                   className="relative rounded-2xl shadow-2xl w-80 h-96 object-cover"
                 />
               </div>
             </div>
             <div className="space-y-6">
               <h2 className="text-2xl lg:text-3xl font-bold text-portfolio-white">
-                A passionate UI/UX Designer dedicated to bringing innovative ideas to life
+                Seorang Desainer UI/UX yang bersemangat dan berdedikasi untuk
+                mewujudkan ide-ide inovatif
               </h2>
               <p className="text-portfolio-gray leading-relaxed">
-                With a strong foundation in user-centered design principles, I specialize in creating digital experiences that are not only visually appealing but also highly functional and accessible. My approach combines creativity with analytical thinking to solve complex design challenges.
+                Dengan fondasi yang kuat dalam prinsip-prinsip desain yang
+                berpusat pada pengguna, saya spesialisasi dalam menciptakan
+                pengalaman digital yang tidak hanya menarik secara visual tetapi
+                juga sangat fungsional dan mudah diakses. Pendekatan saya
+                menggabungkan kreativitas dengan pemikiran analitis untuk
+                memecahkan tantangan desain yang kompleks.
               </p>
               <p className="text-portfolio-gray leading-relaxed">
-                I believe that great design is invisible – it should feel natural and intuitive to users while achieving business objectives. Through continuous learning and staying updated with the latest design trends and technologies, I strive to deliver exceptional digital solutions that make a positive impact.
+                Saya percaya bahwa desain yang hebat tidak terlihat – desain
+                tersebut harus terasa alami dan intuitif bagi pengguna sekaligus
+                mencapai tujuan bisnis. Melalui pembelajaran berkelanjutan dan
+                mengikuti perkembangan tren dan teknologi desain terkini, saya
+                berupaya menghadirkan solusi digital luar biasa yang memberikan
+                dampak positif.
               </p>
             </div>
           </div>
@@ -96,20 +102,20 @@ const About = () => {
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold text-portfolio-white mb-4">
-              EXPERIENCE
+              PENGALAMAN
             </h2>
           </div>
           <div className="max-w-4xl mx-auto">
             <div className="relative">
               {/* Timeline Line */}
               <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-portfolio-orange"></div>
-              
+
               <div className="space-y-12">
                 {experiences.map((exp, index) => (
                   <div key={index} className="relative pl-20">
                     {/* Timeline Dot */}
                     <div className="absolute left-6 w-4 h-4 bg-portfolio-orange rounded-full border-4 border-portfolio-navy-light"></div>
-                    
+
                     <div className="bg-portfolio-navy rounded-xl p-6 shadow-portfolio-card">
                       <h3 className="text-xl font-bold text-portfolio-white mb-2">
                         {exp.title}
@@ -122,8 +128,13 @@ const About = () => {
                       </p>
                       <ul className="space-y-2">
                         {exp.responsibilities.map((responsibility, idx) => (
-                          <li key={idx} className="text-portfolio-gray text-sm flex items-start">
-                            <span className="text-portfolio-orange mr-2 mt-1">•</span>
+                          <li
+                            key={idx}
+                            className="text-portfolio-gray text-sm flex items-start"
+                          >
+                            <span className="text-portfolio-orange mr-2 mt-1">
+                              •
+                            </span>
                             {responsibility}
                           </li>
                         ))}
@@ -142,12 +153,15 @@ const About = () => {
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold text-portfolio-white mb-4">
-              ACTIVITY GALLERY
+              DOKUMENTASI KEGIATAN
             </h2>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
             {galleryImages.map((image, index) => (
-              <div key={index} className="aspect-square overflow-hidden rounded-xl">
+              <div
+                key={index}
+                className="aspect-square overflow-hidden rounded-xl"
+              >
                 <img
                   src={image}
                   alt={`Activity ${index + 1}`}
@@ -161,9 +175,9 @@ const About = () => {
 
       {/* CTA Section */}
       <CTASection
-        title="Want to Learn More? Read Further on the Blog!"
-        description="Explore my thoughts! Click the button below to see some of my work, or you can see my ideas and thoughts that I've written on my blog."
-        buttonText="Explore Now"
+        title="Ingin tahu lebih lanjut? Baca selengkapnya di blog!"
+        description="Jelajahi pemikiran saya! Klik tombol di bawah ini untuk melihat beberapa karya saya, atau Anda dapat melihat ide dan pemikiran yang telah saya tulis di blog saya."
+        buttonText="Jelajahi Sekarang"
         buttonUrl="/blogs"
       />
 

@@ -1,67 +1,78 @@
-import React from 'react';
-import { Header } from '@/components/Header';
-import { Footer } from '@/components/Footer';
-import { CTASection } from '@/components/CTASection';
-import project1 from '@/assets/project-1.jpg';
-import project2 from '@/assets/project-2.jpg';
-import project3 from '@/assets/project-3.jpg';
-import project4 from '@/assets/project-4.jpg';
+import React from "react";
+import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
+import { CTASection } from "@/components/CTASection";
+import project12 from "@/assets/project-12.jpg";
+import project13 from "@/assets/project-13.jpg";
+import project14 from "@/assets/project-14.jpg";
+import project15 from "@/assets/project-15.jpg";
 
 const Certifications = () => {
   const certificates = [
     {
-      title: "Figmalion UI/UX Project Course: Design 2 Apps and Get Job Ready",
-      description: "Learn Figma: UI/UX Design Masterclass From Beginner to Pro",
-      imageUrl: project1,
-      issuer: "Design Academy",
-      date: "December 2024",
-      credentialId: "FA-2024-001"
+      title: "Kursus Proyek UI/UX Figma: Desain 2 Aplikasi dan Siap Kerja",
+      description:
+        "Menguasai Figma dengan mendesain 2 aplikasi UI/UX nyata. Kursus ini membekali Anda dengan portofolio kuat dan kesiapan untuk langsung berkarier.",
+      imageUrl: project12,
+      issuer: "Udemy",
+      date: "10 Oktober 2024",
+      credentialId: "FA-2024-001",
     },
     {
-      title: "Google UX Design Professional Certificate",
-      description: "Comprehensive program covering user research, prototyping, and design thinking methodologies",
-      imageUrl: project2,
-      issuer: "Google Career Certificates",
-      date: "November 2024",
-      credentialId: "GUX-2024-789"
+      title:
+        "melajari Figma: Kelas Master Desain UI/UX dari Pemula hingga Profesional",
+      description:
+        "Menguasai Figma dari dasar hingga mahir untuk mendesain antarmuka (UI) dan pengalaman pengguna (UX) aplikasi secara profesional.",
+      imageUrl: project13,
+      issuer: "Udemy",
+      date: "15 Oktober 2024",
+      credentialId: "GUX-2024-789",
     },
     {
-      title: "Adobe Certified Expert - Photoshop",
-      description: "Advanced certification in Adobe Photoshop for digital design and photo manipulation",
-      imageUrl: project3,
-      issuer: "Adobe",
-      date: "October 2024",
-      credentialId: "ACE-PS-2024"
+      title:
+        "Desain Pengalaman Pengguna - Pelajari Desain Aplikasi UI UX dengan Figma",
+      description:
+        "Melajari cara mendesain aplikasi UI/UX yang intuitif dan menarik menggunakan Figma, fokus pada pengalaman pengguna yang optimal.",
+      imageUrl: project14,
+      issuer: "Udemy",
+      date: "4 Juli 2024",
+      credentialId: "ACE-PS-2024",
     },
     {
-      title: "Human-Computer Interaction Certification",
-      description: "Understanding user behavior, interaction design, and usability testing principles",
-      imageUrl: project4,
-      issuer: "HCI Institute",
-      date: "September 2024",
-      credentialId: "HCI-2024-456"
-    }
+      title: "Bootcamp Pengembangan Web dengan HTML CSS PHP MySQL WordPress",
+      description:
+        "Bootcamp ini membekali Anda dengan keahlian membangun website dari nol, mencakup HTML, CSS, PHP, MySQL, dan WordPress, siap terjun ke dunia pengembangan web.",
+      imageUrl: project15,
+      issuer: "Udemy",
+      date: "26 Juni 2025",
+      credentialId: "HCI-2024-456",
+    },
   ];
 
   return (
     <div className="min-h-screen bg-portfolio-navy">
       <Header currentPage="certifications" />
-      
+
       {/* Certifications Section */}
       <section className="pt-24 pb-16">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
             <h1 className="text-4xl lg:text-5xl font-bold text-portfolio-white mb-6">
-              CERTIFICATE
+              SERTIFIKAT
             </h1>
             <p className="text-xl text-portfolio-gray max-w-4xl mx-auto leading-relaxed">
-              Explore my certifications section to see the professional development milestones that have enhanced my expertise in UI/UX design and digital product development.
+              Jelajahi bagian sertifikasi saya untuk melihat tonggak
+              pengembangan profesional yang telah meningkatkan keahlian saya
+              dalam desain UI/UX dan pengembangan produk digital.
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 gap-8">
             {certificates.map((cert, index) => (
-              <div key={index} className="group bg-portfolio-navy-light rounded-xl overflow-hidden shadow-portfolio-card hover:shadow-portfolio-hover transition-all duration-300 hover:-translate-y-2">
+              <div
+                key={index}
+                className="group bg-portfolio-navy-light rounded-xl overflow-hidden shadow-portfolio-card hover:shadow-portfolio-hover transition-all duration-300 hover:-translate-y-2"
+              >
                 <div className="aspect-video overflow-hidden">
                   <img
                     src={cert.imageUrl}
@@ -89,8 +100,16 @@ const Certifications = () => {
                       ID: {cert.credentialId}
                     </span>
                     <div className="w-6 h-6 bg-portfolio-orange rounded-full flex items-center justify-center">
-                      <svg className="w-3 h-3 text-portfolio-navy" fill="currentColor" viewBox="0 0 20 20">
-                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                      <svg
+                        className="w-3 h-3 text-portfolio-navy"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                      >
+                        <path
+                          fillRule="evenodd"
+                          d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                          clipRule="evenodd"
+                        />
                       </svg>
                     </div>
                   </div>
@@ -103,27 +122,42 @@ const Certifications = () => {
           <div className="mt-16">
             <div className="bg-portfolio-navy-light rounded-2xl p-8 md:p-12 text-center">
               <h2 className="text-2xl lg:text-3xl font-bold text-portfolio-white mb-4">
-                Continuous Learning Journey
+                Perjalanan Belajar Berkelanjutan
               </h2>
               <p className="text-portfolio-gray mb-8 max-w-3xl mx-auto leading-relaxed">
-                I believe in lifelong learning and staying updated with the latest trends and technologies in UI/UX design. These certifications represent my commitment to professional growth and delivering excellence in every project.
+                Saya percaya pada pembelajaran seumur hidup dan selalu mengikuti
+                perkembangan tren dan teknologi terbaru dalam desain UI/UX.
+                Sertifikasi ini mewakili komitmen saya terhadap pertumbuhan
+                profesional dan memberikan keunggulan dalam setiap proyek.
               </p>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-portfolio-orange mb-2">15+</div>
-                  <div className="text-portfolio-gray text-sm">Courses Completed</div>
+                  <div className="text-3xl font-bold text-portfolio-orange mb-2">
+                    15+
+                  </div>
+                  <div className="text-portfolio-gray text-sm">
+                    Kursus Selesai
+                  </div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-portfolio-orange mb-2">500+</div>
-                  <div className="text-portfolio-gray text-sm">Hours of Learning</div>
+                  <div className="text-3xl font-bold text-portfolio-orange mb-2">
+                    500+
+                  </div>
+                  <div className="text-portfolio-gray text-sm">Jam Belajar</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-portfolio-orange mb-2">8</div>
-                  <div className="text-portfolio-gray text-sm">Certifications</div>
+                  <div className="text-3xl font-bold text-portfolio-orange mb-2">
+                    15
+                  </div>
+                  <div className="text-portfolio-gray text-sm">Sertifikat</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-portfolio-orange mb-2">3</div>
-                  <div className="text-portfolio-gray text-sm">Years Experience</div>
+                  <div className="text-3xl font-bold text-portfolio-orange mb-2">
+                    2
+                  </div>
+                  <div className="text-portfolio-gray text-sm">
+                    Pengalaman Bertahun-tahun
+                  </div>
                 </div>
               </div>
             </div>
@@ -133,9 +167,9 @@ const Certifications = () => {
 
       {/* CTA Section */}
       <CTASection
-        title="Got a Project Idea? Let's Collaborate!"
-        description="I'd love to help you bring your vision to life using my certified skills and expertise in UI/UX design and digital product development."
-        buttonText="Explore Now"
+        title="Punya Ide Proyek? Ayo Berkolaborasi!"
+        description="Saya ingin membantu Anda mewujudkan visi Anda menggunakan keterampilan dan keahlian saya yang tersertifikasi dalam desain UI/UX dan pengembangan produk digital."
+        buttonText="Jelajahi Sekarang"
         buttonUrl="/contact"
       />
 

@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 export const Footer: React.FC = () => {
   return (
@@ -6,7 +6,7 @@ export const Footer: React.FC = () => {
       <div className="container mx-auto px-6">
         <div className="text-center">
           <p className="text-portfolio-gray text-sm">
-            © Moh. Ibnu Kandiyas 2025
+            © Copyright Moh. Ibnu Kandiyas All Rights Reserved 2025
           </p>
         </div>
       </div>

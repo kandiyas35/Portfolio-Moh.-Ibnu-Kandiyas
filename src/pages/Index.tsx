@@ -1,52 +1,60 @@
-import React from 'react';
-import { Header } from '@/components/Header';
-import { Footer } from '@/components/Footer';
-import { ProjectCard } from '@/components/ProjectCard';
-import { CTASection } from '@/components/CTASection';
-import { Button } from '@/components/ui/button';
-import profileHero from '@/assets/profile-hero.jpg';
-import project1 from '@/assets/project-1.jpg';
-import project2 from '@/assets/project-2.jpg';
-import project3 from '@/assets/project-3.jpg';
-import project4 from '@/assets/project-4.jpg';
+import React from "react";
+import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
+import { ProjectCard } from "@/components/ProjectCard";
+import { CTASection } from "@/components/CTASection";
+import { Button } from "@/components/ui/button";
+import profileHero from "@/assets/profile-hero.jpg";
+import project1 from "@/assets/project-1.jpg";
+import project2 from "@/assets/project-2.jpg";
+import project3 from "@/assets/project-3.jpg";
+import project4 from "@/assets/project-4.jpg";
+import project5 from "@/assets/project-5.jpg";
 
 const Index = () => {
   const featuredProjects = [
     {
       title: "🔗 Website Penanggungan Summit Explore",
-      description: "Website destinasi wisata yang menampilkan keindahan Gunung Penanggungan dengan pengalaman pengguna yang imersif.",
+      description:
+        "Website destinasi wisata yang menampilkan keindahan Gunung Penanggungan dengan pengalaman pengguna yang imersif.",
       imageUrl: project1,
       projectUrl: "https://kandiyas35.github.io/Penanggung-Summit-Explore/",
-      isExternal: true
+      isExternal: true,
     },
     {
       title: "🎓 Website Persiapan UTBK - S2TU",
-      description: "Platform pembelajaran online untuk persiapan UTBK dengan fitur lengkap dan antarmuka yang user-friendly.",
+      description:
+        "Platform pembelajaran online untuk persiapan UTBK dengan fitur lengkap dan antarmuka yang user-friendly.",
       imageUrl: project2,
       projectUrl: "https://github.com/kandiyas35/Website-Persiapan-UTBK-S2TU",
-      isExternal: true
+      isExternal: true,
     },
     {
       title: "🚗 Remote Controller Robot Car (ESP32)",
-      description: "Sistem kontrol robot mobil berbasis ESP32 dengan antarmuka web yang responsif dan real-time.",
+      description:
+        "Sistem kontrol robot mobil berbasis ESP32 dengan antarmuka web yang responsif dan real-time.",
       imageUrl: project3,
       projectUrl: "https://kandiyas35.github.io/Smar-Robot-Car-ESP-32/",
-      isExternal: true
+      isExternal: true,
     },
     {
-      title: "🏠 UI/UX Website \"Omah Impian\"",
-      description: "Desain UI/UX modern untuk website properti dengan fokus pada kemudahan navigasi dan pengalaman pengguna.",
+      title: '🏠 UI/UX Website "Omah Impian"',
+      description:
+        "Desain UI/UX modern untuk website properti dengan fokus pada kemudahan navigasi dan pengalaman pengguna.",
       imageUrl: project4,
-      projectUrl: "https://www.figma.com/proto/r4HSI76YJJAYt8W1XO9yRf/Untitled?node-id=0-1&t=EIIOPAvPPLx7k39t-1",
-      isExternal: true
+      projectUrl:
+        "https://www.figma.com/proto/r4HSI76YJJAYt8W1XO9yRf/Untitled?node-id=0-1&t=EIIOPAvPPLx7k39t-1",
+      isExternal: true,
     },
     {
-      title: "📱 Mobile UI/UX App \"One UNESA\"",
-      description: "Desain aplikasi mobile untuk komunitas UNESA dengan antarmuka yang intuitif dan engagement yang tinggi.",
-      imageUrl: project1,
-      projectUrl: "https://www.figma.com/proto/7NBj52f5WRfuJI6JgagLOp/NCast---Podcast-App--Community-?page-id=&node-id=2184-199&starting-point-node-id=2099%3A94&t=5Vm7MHIaFtaVeG7b-1",
-      isExternal: true
-    }
+      title: '📱 Mobile UI/UX App "One UNESA"',
+      description:
+        "Desain aplikasi mobile untuk komunitas UNESA dengan antarmuka yang intuitif dan engagement yang tinggi.",
+      imageUrl: project5,
+      projectUrl:
+        "https://www.figma.com/proto/7NBj52f5WRfuJI6JgagLOp/NCast---Podcast-App--Community-?page-id=&node-id=2184-199&starting-point-node-id=2099%3A94&t=5Vm7MHIaFtaVeG7b-1",
+      isExternal: true,
+    },
   ];
 
   const skills = [
@@ -54,30 +62,47 @@ const Index = () => {
     { name: "Figma", icon: "🎨" },
     { name: "Python", icon: "🐍" },
     { name: "HTML5", icon: "🌐" },
-    { name: "CSS3", icon: "💅" }
+    { name: "CSS3", icon: "💅" },
+    { name: "React", icon: "⚛️" },
   ];
 
   return (
     <div className="min-h-screen bg-portfolio-navy">
       <Header currentPage="home" />
-      
+
       {/* Hero Section */}
-      <section className="pt-24 pb-16 bg-gradient-hero">
+      <section className="pt-28 pb-20 bg-gradient-hero min-h-[80vh]">
         <div className="container mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="text-center lg:text-left">
-              <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold text-portfolio-white mb-6 leading-tight">
-                Saya adalah seorang <span className="text-portfolio-orange underline decoration-4 underline-offset-8">Desainer UI/UX</span> dengan minat yang kuat dalam merancang produk digital yang mulus dan menyenangkan.
+              <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-portfolio-white mb-6 leading-relaxed">
+                <span className="bg-gradient-to-r from-portfolio-orange via-orange-400 to-yellow-400 bg-clip-text text-transparent font-bold underline decoration-dotted underline-offset-4">
+                  Desainer UI/UX
+                </span>{" "}
+                &{" "}
+                <span className="bg-gradient-to-r from-yellow-400 via-orange-400 to-portfolio-orange bg-clip-text text-transparent font-bold underline decoration-dotted underline-offset-4">
+                  Junior Web Developer
+                </span>{" "}
+                yang bersemangat menciptakan produk digital yang mulus dan
+                menyenangkan.
               </h1>
+
               <p className="text-xl text-portfolio-gray mb-8 leading-relaxed">
-                Halo, saya Moh. Ibnu Kandiyas, saya berdedikasi untuk merancang produk digital yang mulus dan menyenangkan.
+                Halo, saya Moh. Ibnu Kandiyas, saya berdedikasi untuk merancang
+                produk digital yang mulus dan menyenangkan.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                 <Button size="lg" asChild>
                   <a href="/contact">Hubungi Saya</a>
                 </Button>
                 <Button variant="secondary" size="lg" asChild>
-                  <a href="https://drive.google.com/drive/folders/1NBuT8jNVMb44HT_lqZGnYU-1yQM3UYDh?usp=sharing" target="_blank" rel="noopener noreferrer">📄 Unduh CV</a>
+                  <a
+                    href="https://drive.google.com/drive/folders/1NBuT8jNVMb44HT_lqZGnYU-1yQM3UYDh?usp=sharing"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    📄 Unduh CV
+                  </a>
                 </Button>
               </div>
             </div>
@@ -100,10 +125,12 @@ const Index = () => {
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold text-portfolio-white mb-4">
-              PROYEK SAYA
+              Projek Saya
             </h2>
             <p className="text-xl text-portfolio-gray max-w-4xl mx-auto leading-relaxed">
-              Kumpulan proyek UI/UX dan pengembangan web yang telah saya kerjakan dengan fokus pada kepuasan pengguna dan prinsip desain modern.
+              Kumpulan proyek pengembangan UI/UX dan web yang telah saya
+              kerjakan dengan fokus pada kepuasan pengguna dan prinsip desain
+              modern.
             </p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8">

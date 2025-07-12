@@ -1,59 +1,67 @@
-import React from 'react';
-import { Header } from '@/components/Header';
-import { Footer } from '@/components/Footer';
-import { CTASection } from '@/components/CTASection';
-import { Button } from '@/components/ui/button';
-import project1 from '@/assets/project-1.jpg';
-import project2 from '@/assets/project-2.jpg';
-import project3 from '@/assets/project-3.jpg';
+import React from "react";
+import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
+import { CTASection } from "@/components/CTASection";
+import { Button } from "@/components/ui/button";
+import project1 from "@/assets/project-1.jpg";
+import project2 from "@/assets/project-2.jpg";
+import project3 from "@/assets/project-3.jpg";
 
 const Blogs = () => {
   const blogPosts = [
     {
       title: "The Future of UI/UX Design: Trends to Watch in 2024",
-      description: "Exploring emerging design trends, AI integration, and how user expectations are evolving in the digital landscape.",
+      description:
+        "Exploring emerging design trends, AI integration, and how user expectations are evolving in the digital landscape.",
       imageUrl: project1,
       date: "20 Jan 2025",
       readTime: "5 min read",
-      category: "Design Trends"
+      category: "Design Trends",
     },
     {
       title: "Creating Accessible Design: A Designer's Guide",
-      description: "Learn the fundamental principles of accessibility in design and how to create inclusive digital experiences for all users.",
+      description:
+        "Learn the fundamental principles of accessibility in design and how to create inclusive digital experiences for all users.",
       imageUrl: project2,
       date: "15 Jan 2025",
       readTime: "8 min read",
-      category: "Accessibility"
+      category: "Accessibility",
     },
     {
       title: "From Figma to Production: A Seamless Design Handoff",
-      description: "Best practices for collaborating with developers and ensuring your designs are implemented exactly as intended.",
+      description:
+        "Best practices for collaborating with developers and ensuring your designs are implemented exactly as intended.",
       imageUrl: project3,
       date: "10 Jan 2025",
       readTime: "6 min read",
-      category: "Workflow"
-    }
+      category: "Workflow",
+    },
   ];
 
   return (
     <div className="min-h-screen bg-portfolio-navy">
       <Header currentPage="blogs" />
-      
+
       {/* Blogs Section */}
       <section className="pt-24 pb-16">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
             <h1 className="text-4xl lg:text-5xl font-bold text-portfolio-white mb-6">
-              BLOGS
+              BLOG
             </h1>
             <p className="text-xl text-portfolio-gray max-w-4xl mx-auto leading-relaxed">
-              Welcome to my blog, where I share insights, experiences, and thoughts on UI/UX design, technology trends, and the creative process behind digital product development.
+              Selamat datang di blog saya, tempat saya berbagi wawasan,
+              pengalaman, dan pemikiran tentang desain UI/UX, tren teknologi,
+              dan proses kreatif di balik pengembangan produk digital.
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {blogPosts.map((post, index) => (
-              <article key={index} className="group bg-portfolio-navy-light rounded-xl overflow-hidden shadow-portfolio-card hover:shadow-portfolio-hover transition-all duration-300 hover:-translate-y-2">
+              <article
+                key={index}
+                className="group bg-portfolio-navy-light rounded-xl overflow-hidden shadow-portfolio-card hover:shadow-portfolio-hover transition-all duration-300 hover:-translate-y-2"
+              >
                 <div className="aspect-video overflow-hidden">
                   <img
                     src={post.imageUrl}
@@ -110,15 +118,15 @@ const Blogs = () => {
                     Building a Design System from Scratch
                   </h2>
                   <p className="text-portfolio-gray mb-6 leading-relaxed">
-                    A comprehensive guide on creating scalable design systems that grow with your product and team. Learn about component libraries, design tokens, and documentation best practices.
+                    A comprehensive guide on creating scalable design systems
+                    that grow with your product and team. Learn about component
+                    libraries, design tokens, and documentation best practices.
                   </p>
                   <div className="flex items-center justify-between">
                     <span className="text-sm text-portfolio-gray">
                       25 Jan 2025 • 12 min read
                     </span>
-                    <Button>
-                      Read Full Article
-                    </Button>
+                    <Button>Read Full Article</Button>
                   </div>
                 </div>
               </div>
