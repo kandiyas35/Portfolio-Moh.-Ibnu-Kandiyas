@@ -10,6 +10,7 @@ import project2 from "@/assets/project-2.jpg";
 import project3 from "@/assets/project-3.jpg";
 import project4 from "@/assets/project-4.jpg";
 import project5 from "@/assets/project-5.jpg";
+import project20 from "@/assets/project-20.jpg";
 
 const Index = () => {
   const featuredProjects = [
@@ -55,15 +56,24 @@ const Index = () => {
         "https://www.figma.com/proto/7NBj52f5WRfuJI6JgagLOp/NCast---Podcast-App--Community-?page-id=&node-id=2184-199&starting-point-node-id=2099%3A94&t=5Vm7MHIaFtaVeG7b-1",
       isExternal: true,
     },
+    {
+      title: "🍅 Deteksi Kematangan Tomat",
+      description:
+        "Proyek berbasis Python dan Computer Vision untuk mengklasifikasikan tingkat kematangan tomat menggunakan citra digital tanpa antarmuka pengguna grafis.",
+      imageUrl: project20, // atau ganti jika ada gambar khusus
+      projectUrl: "https://github.com/kandiyas35/Deteksi-Kematangan-Tomat",
+      isExternal: true,
+    },
   ];
 
-  const skills = [
-    { name: "Visual Studio Code", icon: "💻" },
-    { name: "Figma", icon: "🎨" },
-    { name: "Python", icon: "🐍" },
-    { name: "HTML5", icon: "🌐" },
-    { name: "CSS3", icon: "💅" },
-    { name: "React", icon: "⚛️" },
+  const toolsAndSkills = [
+    { name: "Visual Studio Code", icon: "💻", type: "Tool" },
+    { name: "Figma", icon: "🎨", type: "Tool" },
+    { name: "HTML", icon: "🌐", type: "Skill" },
+    { name: "CSS", icon: "💅", type: "Skill" },
+    { name: "JavaScript", icon: "📜", type: "Skill" },
+    { name: "React", icon: "⚛️", type: "Skill" },
+    { name: "Python", icon: "🐍", type: "Skill" },
   ];
 
   return (
@@ -83,13 +93,14 @@ const Index = () => {
                 <span className="bg-gradient-to-r from-yellow-400 via-orange-400 to-portfolio-orange bg-clip-text text-transparent font-bold underline decoration-dotted underline-offset-4">
                   Junior Web Developer
                 </span>{" "}
-                yang bersemangat menciptakan produk digital yang mulus dan
+                yang bersemangat menciptakan produk digital yang inovatif dan
                 menyenangkan.
               </h1>
 
               <p className="text-xl text-portfolio-gray mb-8 leading-relaxed">
-                Halo, saya Moh. Ibnu Kandiyas, saya berdedikasi untuk merancang
-                produk digital yang mulus dan menyenangkan.
+                Halo, saya Moh. Ibnu Kandiyas, Saya berfokus pada perancangan
+                produk digital yang intuitif dan memberikan pengalaman yang
+                memuaskan.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                 <Button size="lg" asChild>
@@ -151,10 +162,10 @@ const Index = () => {
       <section className="py-16 bg-portfolio-navy-light">
         <div className="container mx-auto px-6">
           <h2 className="text-2xl font-bold text-portfolio-white text-center mb-12">
-            Alat yang Saya Gunakan
+            Tools & Skill
           </h2>
           <div className="flex flex-wrap justify-center gap-8">
-            {skills.map((skill, index) => (
+            {toolsAndSkills.map((skill, index) => (
               <div
                 key={index}
                 className="flex flex-col items-center p-6 bg-portfolio-navy rounded-xl hover:bg-portfolio-navy/80 transition-colors group cursor-pointer"

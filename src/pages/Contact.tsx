@@ -54,7 +54,7 @@ const Contact = () => {
                       id="email"
                       name="email"
                       className="w-full px-4 py-3 bg-portfolio-navy border border-portfolio-gray-dark rounded-lg text-portfolio-white placeholder-portfolio-gray focus:outline-none focus:ring-2 focus:ring-portfolio-orange focus:border-transparent transition-all"
-                      placeholder="Masukkan alamat email Anda"
+                      placeholder="Masukkan Alamat Email Anda"
                     />
                   </div>
 

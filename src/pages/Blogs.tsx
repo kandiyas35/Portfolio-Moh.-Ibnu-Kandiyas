@@ -3,38 +3,43 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { CTASection } from "@/components/CTASection";
 import { Button } from "@/components/ui/button";
-import project1 from "@/assets/project-1.jpg";
-import project2 from "@/assets/project-2.jpg";
-import project3 from "@/assets/project-3.jpg";
+import project16 from "@/assets/project-16.jpg";
+import project17 from "@/assets/project-17.jpg";
+import project18 from "@/assets/project-18.jpg";
+import project19 from "@/assets/project-19.jpg";
 
 const Blogs = () => {
   const blogPosts = [
     {
-      title: "The Future of UI/UX Design: Trends to Watch in 2024",
+      title:
+        "Masa Depan Desain UI/UX: Tren yang Perlu Diperhatikan di Tahun 2025",
       description:
-        "Exploring emerging design trends, AI integration, and how user expectations are evolving in the digital landscape.",
-      imageUrl: project1,
+        "Menjelajahi tren desain yang muncul, integrasi AI, dan bagaimana ekspektasi pengguna berkembang dalam lanskap digital.",
+      imageUrl: project16,
       date: "20 Jan 2025",
-      readTime: "5 min read",
-      category: "Design Trends",
+      readTime: "5 menit membaca",
+      category: "Tren Desain",
+      url: "https://www.loungelizard.com/blog/future-of-ui-ux-design/",
     },
     {
-      title: "Creating Accessible Design: A Designer's Guide",
+      title: "Menciptakan Desain yang Aksesibel: Panduan Desainer",
       description:
-        "Learn the fundamental principles of accessibility in design and how to create inclusive digital experiences for all users.",
-      imageUrl: project2,
+        "Pelajari prinsip dasar aksesibilitas dalam desain dan cara menciptakan pengalaman digital inklusif untuk semua pengguna.",
+      imageUrl: project17,
       date: "15 Jan 2025",
-      readTime: "8 min read",
-      category: "Accessibility",
+      readTime: "8 menit membaca",
+      category: "Aksesibilitas",
+      url: "https://codilime.com/blog/what-is-accessibility-design/",
     },
     {
-      title: "From Figma to Production: A Seamless Design Handoff",
+      title: "Dari Figma ke Produksi: Serah Terima Desain yang Lancar",
       description:
-        "Best practices for collaborating with developers and ensuring your designs are implemented exactly as intended.",
-      imageUrl: project3,
+        "Praktik terbaik untuk berkolaborasi dengan pengembang dan memastikan desain Anda diterapkan persis seperti yang diharapkan.",
+      imageUrl: project18,
       date: "10 Jan 2025",
-      readTime: "6 min read",
-      category: "Workflow",
+      readTime: "6 menit membaca",
+      category: "Alur kerja",
+      url: "https://www.smashingmagazine.com/2023/05/designing-better-design-handoff-file-figma/",
     },
   ];
 
@@ -56,6 +61,7 @@ const Blogs = () => {
             </p>
           </div>
 
+          {/* Blog Cards */}
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {blogPosts.map((post, index) => (
               <article
@@ -88,9 +94,15 @@ const Blogs = () => {
                     <span className="text-xs text-portfolio-gray">
                       {post.date}
                     </span>
-                    <Button variant="outline" size="sm">
-                      Explore Now
-                    </Button>
+                    <a
+                      href={post.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <Button variant="outline" size="sm">
+                        Jelajahi Sekarang
+                      </Button>
+                    </a>
                   </div>
                 </div>
               </article>
@@ -103,7 +115,7 @@ const Blogs = () => {
               <div className="grid lg:grid-cols-2 gap-0">
                 <div className="aspect-video lg:aspect-auto">
                   <img
-                    src={project1}
+                    src={project19}
                     alt="Featured Article"
                     className="w-full h-full object-cover"
                   />
@@ -111,22 +123,29 @@ const Blogs = () => {
                 <div className="p-8 lg:p-12 flex flex-col justify-center">
                   <div className="mb-4">
                     <span className="text-sm font-medium text-portfolio-orange bg-portfolio-orange/10 px-3 py-1 rounded-full">
-                      Featured Article
+                      Artikel Unggulan
                     </span>
                   </div>
                   <h2 className="text-2xl lg:text-3xl font-bold text-portfolio-white mb-4">
-                    Building a Design System from Scratch
+                    Membangun Sistem Desain dari Awal
                   </h2>
                   <p className="text-portfolio-gray mb-6 leading-relaxed">
-                    A comprehensive guide on creating scalable design systems
-                    that grow with your product and team. Learn about component
-                    libraries, design tokens, and documentation best practices.
+                    Panduan komprehensif tentang cara membuat sistem desain
+                    skalabel yang berkembang bersama produk dan tim Anda.
+                    Pelajari tentang pustaka komponen, token desain, dan praktik
+                    terbaik dokumentasi.
                   </p>
                   <div className="flex items-center justify-between">
                     <span className="text-sm text-portfolio-gray">
-                      25 Jan 2025 • 12 min read
+                      25 Jan 2025 • 12 menit membaca
                     </span>
-                    <Button>Read Full Article</Button>
+                    <a
+                      href="https://www.netguru.com/blog/how-to-build-design-systems-from-scratch"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <Button>Baca Artikel Lengkapnya</Button>
+                    </a>
                   </div>
                 </div>
               </div>
@@ -137,9 +156,9 @@ const Blogs = () => {
 
       {/* CTA Section */}
       <CTASection
-        title="Got a Project Idea? Let's Collaborate!"
-        description="I'd love to help you bring your vision to life. Whether it's a mobile app, website, or digital product, let's create something amazing together."
-        buttonText="Explore Now"
+        title="Punya Ide Proyek? Ayo Berkolaborasi!"
+        description="Saya ingin sekali membantu Anda mewujudkan visi Anda. Baik itu aplikasi seluler, situs web, maupun produk digital, mari kita ciptakan sesuatu yang luar biasa bersama."
+        buttonText="Jelajahi Sekarang"
         buttonUrl="/contact"
       />
 
