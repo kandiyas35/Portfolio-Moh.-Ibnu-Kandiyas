@@ -6,7 +6,7 @@ export const Footer: React.FC = () => {
       <div className="container mx-auto px-6">
         <div className="text-center">
           <p className="text-portfolio-gray text-sm">
-            Copyright Moh. Ibnu Kondiyasa. All Rights Reserved.
+            © Moh. Ibnu Kandiyas 2025
           </p>
         </div>
       </div>

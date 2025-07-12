@@ -13,28 +13,39 @@ import project4 from '@/assets/project-4.jpg';
 const Index = () => {
   const featuredProjects = [
     {
-      title: "Mobile App Design",
-      description: "A comprehensive UI/UX design for a modern mobile application with intuitive user flows and engaging interactions.",
+      title: "🔗 Website Penanggungan Summit Explore",
+      description: "Website destinasi wisata yang menampilkan keindahan Gunung Penanggungan dengan pengalaman pengguna yang imersif.",
       imageUrl: project1,
-      projectUrl: "/project-1"
+      projectUrl: "https://kandiyas35.github.io/Penanggung-Summit-Explore/",
+      isExternal: true
     },
     {
-      title: "Gunung Penanggungan",
-      description: "Travel destination website design showcasing beautiful mountain landscapes with immersive user experience.",
+      title: "🎓 Website Persiapan UTBK - S2TU",
+      description: "Platform pembelajaran online untuk persiapan UTBK dengan fitur lengkap dan antarmuka yang user-friendly.",
       imageUrl: project2,
-      projectUrl: "/project-2"
+      projectUrl: "https://github.com/kandiyas35/Website-Persiapan-UTBK-S2TU",
+      isExternal: true
     },
     {
-      title: "E-commerce Dashboard",
-      description: "Analytics and data visualization dashboard design for e-commerce platform with comprehensive metrics.",
+      title: "🚗 Remote Controller Robot Car (ESP32)",
+      description: "Sistem kontrol robot mobil berbasis ESP32 dengan antarmuka web yang responsif dan real-time.",
       imageUrl: project3,
-      projectUrl: "/project-3"
+      projectUrl: "https://kandiyas35.github.io/Smar-Robot-Car-ESP-32/",
+      isExternal: true
     },
     {
-      title: "Banking App Interface",
-      description: "Modern fintech application design focused on security, usability, and seamless financial transactions.",
+      title: "🏠 UI/UX Website \"Omah Impian\"",
+      description: "Desain UI/UX modern untuk website properti dengan fokus pada kemudahan navigasi dan pengalaman pengguna.",
       imageUrl: project4,
-      projectUrl: "/project-4"
+      projectUrl: "https://www.figma.com/proto/r4HSI76YJJAYt8W1XO9yRf/Untitled?node-id=0-1&t=EIIOPAvPPLx7k39t-1",
+      isExternal: true
+    },
+    {
+      title: "📱 Mobile UI/UX App \"One UNESA\"",
+      description: "Desain aplikasi mobile untuk komunitas UNESA dengan antarmuka yang intuitif dan engagement yang tinggi.",
+      imageUrl: project1,
+      projectUrl: "https://www.figma.com/proto/7NBj52f5WRfuJI6JgagLOp/NCast---Podcast-App--Community-?page-id=&node-id=2184-199&starting-point-node-id=2099%3A94&t=5Vm7MHIaFtaVeG7b-1",
+      isExternal: true
     }
   ];
 
@@ -56,17 +67,17 @@ const Index = () => {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="text-center lg:text-left">
               <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold text-portfolio-white mb-6 leading-tight">
-                I am a <span className="text-portfolio-orange underline decoration-4 underline-offset-8">UI/UX Designer</span> with a strong interest in designing seamless and delightful digital products.
+                Saya adalah seorang <span className="text-portfolio-orange underline decoration-4 underline-offset-8">Desainer UI/UX</span> dengan minat yang kuat dalam merancang produk digital yang mulus dan menyenangkan.
               </h1>
               <p className="text-xl text-portfolio-gray mb-8 leading-relaxed">
-                Hi, I'm Moh. Ibnu Kondiyasa, I'm dedicated to designing seamless and delightful digital products.
+                Halo, saya Moh. Ibnu Kandiyas, saya berdedikasi untuk merancang produk digital yang mulus dan menyenangkan.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                 <Button size="lg" asChild>
-                  <a href="/contact">Hire Me</a>
+                  <a href="/contact">Hubungi Saya</a>
                 </Button>
                 <Button variant="secondary" size="lg" asChild>
-                  <a href="/cv/mohibnukondiyasa_cv.pdf" target="_blank">Download CV</a>
+                  <a href="https://drive.google.com/drive/folders/1NBuT8jNVMb44HT_lqZGnYU-1yQM3UYDh?usp=sharing" target="_blank" rel="noopener noreferrer">📄 Unduh CV</a>
                 </Button>
               </div>
             </div>
@@ -75,7 +86,7 @@ const Index = () => {
                 <div className="absolute inset-0 bg-portfolio-orange/20 rounded-full blur-3xl"></div>
                 <img
                   src={profileHero}
-                  alt="Moh. Ibnu Kondiyasa"
+                  alt="Moh. Ibnu Kandiyas"
                   className="relative rounded-2xl shadow-2xl w-80 h-96 object-cover"
                 />
               </div>
@@ -89,8 +100,11 @@ const Index = () => {
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold text-portfolio-white mb-4">
-              FEATURED PROJECTS
+              PROYEK SAYA
             </h2>
+            <p className="text-xl text-portfolio-gray max-w-4xl mx-auto leading-relaxed">
+              Kumpulan proyek UI/UX dan pengembangan web yang telah saya kerjakan dengan fokus pada kepuasan pengguna dan prinsip desain modern.
+            </p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
             {featuredProjects.map((project, index) => (
@@ -110,7 +124,7 @@ const Index = () => {
       <section className="py-16 bg-portfolio-navy-light">
         <div className="container mx-auto px-6">
           <h2 className="text-2xl font-bold text-portfolio-white text-center mb-12">
-            Tools I Use
+            Alat yang Saya Gunakan
           </h2>
           <div className="flex flex-wrap justify-center gap-8">
             {skills.map((skill, index) => (
@@ -132,9 +146,9 @@ const Index = () => {
 
       {/* CTA Section */}
       <CTASection
-        title="Dive deeper into my professional journey!"
-        description="My portfolio awaits your exploration, showcasing a range of projects and experiences that have shaped me."
-        buttonText="Explore Now"
+        title="Jelajahi lebih dalam perjalanan profesional saya!"
+        description="Portofolio saya menanti eksplorasi Anda, menampilkan berbagai proyek dan pengalaman yang telah membentuk saya."
+        buttonText="Jelajahi Sekarang"
         buttonUrl="/about"
       />
 

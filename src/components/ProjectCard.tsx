@@ -6,13 +6,15 @@ interface ProjectCardProps {
   description: string;
   imageUrl: string;
   projectUrl?: string;
+  isExternal?: boolean;
 }
 
 export const ProjectCard: React.FC<ProjectCardProps> = ({
   title,
   description,
   imageUrl,
-  projectUrl = '#'
+  projectUrl = '#',
+  isExternal = false
 }) => {
   return (
     <div className="group bg-portfolio-navy-light rounded-xl overflow-hidden shadow-portfolio-card hover:shadow-portfolio-hover transition-all duration-300 hover:-translate-y-2">
@@ -31,7 +33,13 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
           {description}
         </p>
         <Button variant="outline" size="sm" asChild>
-          <a href={projectUrl}>Open Project</a>
+          <a 
+            href={projectUrl} 
+            target={isExternal ? "_blank" : "_self"}
+            rel={isExternal ? "noopener noreferrer" : undefined}
+          >
+            Lihat Proyek
+          </a>
         </Button>
       </div>
     </div>

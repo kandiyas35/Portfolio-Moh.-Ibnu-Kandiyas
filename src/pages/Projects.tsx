@@ -11,28 +11,39 @@ import project4 from '@/assets/project-4.jpg';
 const Projects = () => {
   const projects = [
     {
-      title: "Mobile App Design",
-      description: "A comprehensive UI/UX design for a modern mobile application with intuitive user flows and engaging interactions.",
+      title: "🔗 Website Penanggungan Summit Explore",
+      description: "Website destinasi wisata yang menampilkan keindahan Gunung Penanggungan dengan pengalaman pengguna yang imersif.",
       imageUrl: project1,
-      projectUrl: "/project-1"
+      projectUrl: "https://kandiyas35.github.io/Penanggung-Summit-Explore/",
+      isExternal: true
     },
     {
-      title: "Gunung Penanggungan",
-      description: "Travel destination website design showcasing beautiful mountain landscapes with immersive user experience.",
+      title: "🎓 Website Persiapan UTBK - S2TU",
+      description: "Platform pembelajaran online untuk persiapan UTBK dengan fitur lengkap dan antarmuka yang user-friendly.",
       imageUrl: project2,
-      projectUrl: "/project-2"
+      projectUrl: "https://github.com/kandiyas35/Website-Persiapan-UTBK-S2TU",
+      isExternal: true
     },
     {
-      title: "E-commerce Dashboard",
-      description: "Analytics and data visualization dashboard design for e-commerce platform with comprehensive metrics.",
+      title: "🚗 Remote Controller Robot Car (ESP32)",
+      description: "Sistem kontrol robot mobil berbasis ESP32 dengan antarmuka web yang responsif dan real-time.",
       imageUrl: project3,
-      projectUrl: "/project-3"
+      projectUrl: "https://kandiyas35.github.io/Smar-Robot-Car-ESP-32/",
+      isExternal: true
     },
     {
-      title: "Banking App Interface",
-      description: "Modern fintech application design focused on security, usability, and seamless financial transactions.",
+      title: "🏠 UI/UX Website \"Omah Impian\"",
+      description: "Desain UI/UX modern untuk website properti dengan fokus pada kemudahan navigasi dan pengalaman pengguna.",
       imageUrl: project4,
-      projectUrl: "/project-4"
+      projectUrl: "https://www.figma.com/proto/r4HSI76YJJAYt8W1XO9yRf/Untitled?node-id=0-1&t=EIIOPAvPPLx7k39t-1",
+      isExternal: true
+    },
+    {
+      title: "📱 Mobile UI/UX App \"One UNESA\"",
+      description: "Desain aplikasi mobile untuk komunitas UNESA dengan antarmuka yang intuitif dan engagement yang tinggi.",
+      imageUrl: project1,
+      projectUrl: "https://www.figma.com/proto/7NBj52f5WRfuJI6JgagLOp/NCast---Podcast-App--Community-?page-id=&node-id=2184-199&starting-point-node-id=2099%3A94&t=5Vm7MHIaFtaVeG7b-1",
+      isExternal: true
     }
   ];
 
@@ -45,21 +56,22 @@ const Projects = () => {
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
             <h1 className="text-4xl lg:text-5xl font-bold text-portfolio-white mb-6">
-              PROJECT
+              PROYEK SAYA
             </h1>
             <p className="text-xl text-portfolio-gray max-w-4xl mx-auto leading-relaxed">
-              The UI/UX projects that I have worked on, have been created with a strong emphasis on user satisfaction, accessibility, and modern design principles that deliver exceptional digital experiences.
+              Proyek-proyek UI/UX dan pengembangan yang telah saya kerjakan, dibuat dengan penekanan kuat pada kepuasan pengguna, aksesibilitas, dan prinsip desain modern yang memberikan pengalaman digital yang luar biasa.
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 gap-8">
             {projects.map((project, index) => (
-              <ProjectCard
+                <ProjectCard
                 key={index}
                 title={project.title}
                 description={project.description}
                 imageUrl={project.imageUrl}
                 projectUrl={project.projectUrl}
+                isExternal={project.isExternal}
               />
             ))}
           </div>
@@ -68,9 +80,9 @@ const Projects = () => {
 
       {/* CTA Section */}
       <CTASection
-        title="Explore My Insights and Blog"
-        description="Dive into my captivating UI/UX projects and discover how my expertise in user-centric design creates seamless digital experiences that engage and delight users."
-        buttonText="Go to Blog"
+        title="Jelajahi Wawasan dan Blog Saya"
+        description="Selami proyek-proyek UI/UX yang menarik dan temukan bagaimana keahlian saya dalam desain yang berpusat pada pengguna menciptakan pengalaman digital yang mulus dan menyenangkan."
+        buttonText="Lihat Blog"
         buttonUrl="/blogs"
       />
 
